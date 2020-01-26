@@ -1,0 +1,68 @@
+::ng-deep .card-header {
+  padding: 0.1rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(185, 98, 160);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+  color: white !important ;
+}
+::ng-deep .accordion > .card > .card-header {
+  border-radius: 0;
+  margin-bottom: -1px;
+  background-color: rgb(43, 28, 74) !important;
+  padding: 0 0 0 0;
+  color: white !important ;
+}
+::ng-deep .btn-link {
+  font-weight: 400;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+::ng-deep .card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0rem !important ;
+}
+.example-viewport {
+  height: 150px;
+  width: 100%;
+
+  /* border: 1px solid saddlebrown; */
+  display: flex;
+}
+.list {
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: ridge;
+}
+
+.notifications-btn {
+  position: absolute;
+  top: 9vh;
+  right: 8vw;
+}
+.notifications-btn2 {
+  position: absolute;
+  top: 9vh;
+  right: 12vw;
+}
+
+.notifications-btn-icon {
+  position: static !important;
+}
+
+.notifications-accordion {
+  position: absolute;
+  top: 15vh;
+  right: 7vw;
+  width: 300px;
+  border-radius: 0%;
+}
+
+.notification-item {
+  cursor: pointer;
+  color: white;
+  /* background-color: #5167ad !important; */
+}

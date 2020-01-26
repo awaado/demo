@@ -1,0 +1,40 @@
+@import '../../../theme';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  width: 100%;
+
+  .mat-list-item.active {
+    background-color: mat-color($app-primary, 500);
+  }
+  &:hover,
+  &:checked {
+    >.mat-list-item:not(.expanded) {
+      background-color: mat-color($app-primary, 500) !important;
+    }
+  }
+  &:focus {
+    >.mat-list-item:not(.expanded) {
+      background-color: mat-color($app-primary, 500) !important;
+    }
+  }
+}
+
+.mat-list-item {
+  padding: 8px 0;
+  display: flex;
+  width: auto;
+  margin-top: 2px;
+  padding: 0 10px 10px;
+
+  .routeIcon {
+    margin-right: 40px;
+  }
+}
+::ng-deep .mat-nav-list .mat-list-item {
+    cursor: pointer;
+    outline: 0;
+    color: white !important;
+}

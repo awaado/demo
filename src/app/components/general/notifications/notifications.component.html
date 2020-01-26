@@ -1,0 +1,33 @@
+<header>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</header>
+
+<div #notificationsContainer>
+  <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="notifications-accordion">
+    <ngb-panel title="Notifications">
+      <ng-template ngbPanelContent>
+        <ul class="list-group "
+        [ngStyle]="{'margin-top':margin}">
+          <li class="list-group-item notification-item"
+           *ngFor="let note of notifications" (click)="gotoLocation(note)"
+           [ngStyle]="{'background-color':note.deviceID === currentid ? '#fa1b1a' :  '#5167ad'}"
+            >
+            {{note.incident_message}} <br><strong style="font-size: 15px;">{{note.eventTime}}</strong>
+          </li>
+
+        </ul>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>
+<button mat-icon-button matBadge="{{notificatiosCoun}}" matBadgePosition="above after" matBadgeColor="warn"
+  (click)="toogleAccordion()" aria-label="Notifications" class="notifications-btn">
+  <mat-icon class="on-map-buttons notifications-btn-icon">calendar_view_day
+  </mat-icon>
+</button>
+<button mat-icon-button  
+  (click)="playAndPause()" (dblclick)="stopNavigate()" aria-label="Notifications" class="notifications-btn2">
+  <mat-icon class="on-map-buttons notifications-btn-icon">{{icon_style}}
+  </mat-icon>
+</button>

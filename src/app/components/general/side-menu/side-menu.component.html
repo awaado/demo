@@ -1,0 +1,38 @@
+<img src="../../assets/nick.jpg" alt="City +" class="logo">
+
+<mat-sidenav-container #cont class="example-container" *ngIf="!shouldRun">
+  <mat-sidenav #sidenav [mode]="mode.value" style="visibility: visible;overflow-y: visible;">
+    <img #imageToggle (click)="toggleSideMenu();sidenav.toggle();" src="../../assets/arrow-right.svg" alt="Toggle Menu"
+      class="toggle-side-menu">
+    <mat-nav-list class="items-main">
+      <app-sideitems *ngFor="let item of navItems" [item]="item"></app-sideitems>
+      <!-- <mat-list-item class="items-main-category" > City Component </mat-list-item>
+            <a mat-list-item class="items-main-category" > City Component </a>
+            <a mat-list-item class="items-main-category"> Elictricity Meters </a>
+            <a mat-list-item class="items-main-category"> Smart Parking </a>
+            <a mat-list-item class="items-main-category"> Elictricity Meters </a> -->
+    </mat-nav-list>
+  </mat-sidenav>
+  <div>
+    <app-weather class="weather-widget" [style.display]="showWeatherWidget ? 'block' : 'none'"></app-weather>
+    <mat-icon class="on-map-buttons weather-btn" (click)="toggltWeatherComponent()">cloud_queue</mat-icon>
+  </div>
+  <app-map></app-map>
+  <app-notifications></app-notifications>
+</mat-sidenav-container>
+
+<div>
+  <!-- dashboard div -->
+  <img #btnMiniDashBoard src="../../assets/arrow-up.svg" alt="" (click)="toogleMiniDashboard()"
+    class="toogle-mini-charts-button">
+
+  <div class="gaugeDiv" #miniDashboard>
+    <div  [style.display]="currentDB == 'WM' ? 'block' : 'none'">
+    </div>
+    <div style="background-color: yellowgreen;"[style.display]="currentDB == 'SM' ? 'block' : 'none'">
+    </div>
+    <div  [style.display]="currentDB == 'SP' ? 'block' : 'none'">
+    </div>
+    <div  [style.display]="currentDB == 'SL' ? 'block' : 'none'">
+    </div>
+  </div>

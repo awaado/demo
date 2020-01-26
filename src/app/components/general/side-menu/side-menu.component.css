@@ -1,0 +1,95 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-radio-group {
+  display: block;
+  border: 1px solid #555;
+  margin: 20px;
+  padding: 10px;
+}
+
+.logo {
+  width: 7vw;
+  height: 7vw;
+  position: absolute;
+  z-index: 1500;
+}
+
+.toggle-side-menu {
+  width: 25px;
+  height: 53px;
+  position: absolute;
+  left: 27vw;
+  top: 20px;
+  visibility: visible;
+  z-index: 5;
+}
+
+.weather-widget {
+  position: fixed;
+  width: 93%;
+  left: 7%;
+  z-index: 1500;
+}
+
+.weather-btn {
+  top: 9vh;
+  right: 15.8vw;
+}
+
+.toogle-mini-charts-button {
+  position: absolute;
+  right: 50%;
+  height: 25px;
+  width: 53px;
+  bottom: 0vh;
+  z-index: 5;
+}
+
+.gaugeDiv {
+  position: absolute;
+  bottom: 0vh;
+  float: right;
+  width: 100%;
+  background-color: rgb(43, 28, 74);
+  z-index: 5;
+}
+
+.items-main {
+  display: block;
+  /* border: 1px solid #555; */
+  /* margin: 20px; */
+  /* margin-right: 106px;
+    padding-right: 42px; */
+  padding-top: 100px;
+  width: 20vw;
+}
+
+::ng-deep .items-main-category {
+  background-color: rgb(133, 148, 197);
+  color: rgb(255, 255, 255);
+  margin-top: 2px;
+}
+/* ::ng-deep .items-main-category :hover {
+  background-color: rgb(81, 103, 173);
+  color: rgb(255, 255, 255);
+} */
+.items-main-categoryfhfg {
+  background-color: rgb(174, 184, 216);
+  color: rgb(255, 255, 255);
+}
+
+::ng-deep .mat-list-base .mat-list-item {
+  background-color: #8493c4;
+  color:white !important;
+  color: rgb(255, 255, 255);
+  display: block !important;
+}
+::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
+  visibility: hidden !important ;
+}
